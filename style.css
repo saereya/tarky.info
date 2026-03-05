@@ -44,7 +44,7 @@ section.active{display:block}
 .map-card .links a:hover{background:var(--accent2);border-color:var(--accent);color:#fff;text-decoration:none}
 
 /* Boss Portraits */
-.boss-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:.75rem;align-items:flex-start}
+.boss-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem .75rem;margin-bottom:.75rem}
 .boss-item,.goon-group{display:flex;flex-direction:column;align-items:center;gap:.15rem}
 .boss-avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--border);transition:border-color .15s}
 .map-card:hover .boss-avatar{border-color:var(--accent2)}
