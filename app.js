@@ -203,7 +203,7 @@ function getTarkovTime(left) {
   var now = Date.now();
   var moscowOffset = 3 * 3600 * 1000;
   var utcMs = now + (new Date().getTimezoneOffset() * 60 * 1000);
-  var tarkovMs = ((utcMs + moscowOffset) * 7) % (24 * 3600 * 1000);
+  var tarkovMs = (utcMs * 7 + moscowOffset) % (24 * 3600 * 1000);
   if (!left) tarkovMs = (tarkovMs + 12 * 3600 * 1000) % (24 * 3600 * 1000);
   var totalSec = Math.floor(tarkovMs / 1000);
   var h = Math.floor(totalSec / 3600);
