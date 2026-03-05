@@ -1,0 +1,128 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f0e0d;--surface:#1a1814;--surface2:#22201c;--border:#2d2a24;--text:#c4b998;--text2:#8b8370;--accent:#d4af37;--accent2:#9a7d2e;--green:#4cf057;--red:#cf0b04;--orange:#f39c12}
+body{font-family:'Courier New',Courier,monospace;background:var(--bg);color:var(--text);line-height:1.5;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--text);text-decoration:underline}
+
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+header h1{font-size:1.4rem;color:var(--accent);font-weight:700;letter-spacing:.5px}
+header h1 span{color:var(--text2);font-weight:400}
+nav{display:flex;gap:1rem}
+nav a{color:var(--text2);font-size:.9rem;padding:.3rem .6rem;border-radius:4px;transition:color .15s}
+nav a:hover,nav a.active{color:var(--accent);text-decoration:none}
+
+main{max-width:1400px;margin:0 auto;padding:1.5rem}
+
+/* Sections */
+section{display:none}
+section.active{display:block}
+
+/* Tarkov Time Widget */
+.tarkov-time-widget{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.6rem 1.25rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:1.25rem}
+.time-clocks{display:contents}
+.time-clock{display:flex;align-items:center;gap:.4rem;white-space:nowrap}
+.time-label{font-size:.7rem;color:var(--text2);text-transform:uppercase;letter-spacing:.5px}
+.time-value{font-size:1.1rem;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.daylight-bar-container{flex:1;min-width:0}
+.daylight-bar{position:relative;height:10px;background:var(--surface2);border-radius:5px;overflow:visible;display:flex}
+.daylight-night-zone{border-radius:5px 0 0 5px}
+.daylight-night-zone.left{width:20.83%;border-radius:5px 0 0 5px;background:linear-gradient(90deg,#1a1a3a 60%,#4a2a5a)}
+.daylight-night-zone.right{width:12.5%;border-radius:0 5px 5px 0;background:linear-gradient(90deg,#4a2a5a,#1a1a3a 40%)}
+.daylight-day-zone{background:linear-gradient(90deg,#c46a30 0%,#d4af37 8%,#f0d060 25%,#f0d060 75%,#d4af37 92%,#c46a30 100%);flex:1}
+.daylight-marker{position:absolute;top:-2px;width:3px;height:14px;background:var(--text);border-radius:2px;transform:translateX(-50%);z-index:2;box-shadow:0 0 4px rgba(196,185,152,.5)}
+.daylight-marker.right{background:var(--text2);box-shadow:0 0 4px rgba(139,131,112,.5)}
+.daylight-labels{display:flex;justify-content:space-between;font-size:.55rem;color:var(--text2);margin-top:.15rem;padding:0 2px}
+.daylight-status{font-size:.7rem;color:var(--text2);white-space:nowrap}
+
+/* Maps */
+.maps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.map-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem;transition:border-color .15s,transform .15s;display:flex;flex-direction:column}
+.map-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.map-card h3{font-size:1rem;margin-bottom:.5rem}
+.map-card .links{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto}
+.map-card .links a{flex:1;text-align:center;font-size:.95rem;font-weight:600;padding:.5rem 1rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;transition:background .15s,border-color .15s}
+.map-card .links a:hover{background:var(--accent2);border-color:var(--accent);color:#fff;text-decoration:none}
+
+/* Boss Portraits */
+.boss-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:.75rem;align-items:flex-start}
+.boss-item,.goon-group{display:flex;flex-direction:column;align-items:center;gap:.15rem}
+.boss-avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--border);transition:border-color .15s}
+.map-card:hover .boss-avatar{border-color:var(--accent2)}
+.boss-name,.goon-group .goon-label{font-size:.7rem;color:var(--text2);text-align:center;line-height:1.2}
+.boss-chance,.goon-group .goon-chance{font-size:.65rem;color:var(--accent);font-weight:700}
+.goon-avatars{display:flex;height:36px;align-items:center}
+.goon-avatars .boss-avatar{width:26px;height:26px;margin-left:-5px}
+.goon-avatars .boss-avatar:first-child{margin-left:0}
+
+/* Effectiveness Legend */
+.effectiveness-legend{margin-bottom:1.25rem;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.legend-table{width:100%;border-collapse:collapse;font-size:.8rem}
+.legend-table thead{background:var(--surface)}
+.legend-table th{padding:.5rem .6rem;text-align:left;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--border);font-size:.7rem}
+.legend-table td{padding:.4rem .6rem;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:middle}
+.legend-table tr:last-child td{border-bottom:none}
+.legend-note{padding:.5rem .6rem;font-size:.7rem;color:var(--text2);font-style:italic;border-top:1px solid var(--border);background:var(--surface)}
+
+/* Effectiveness badges */
+.eff{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:4px;font-weight:700;font-size:.85rem;color:#000}
+.eff-0{background:#cf0b04}
+.eff-1{background:#dc3b07}
+.eff-2{background:#ea6b0a}
+.eff-3{background:#f99d10}
+.eff-4{background:#c0b825}
+.eff-5{background:#87d43d}
+.eff-6{background:#4cf057}
+
+/* Ammo */
+.ammo-controls{display:flex;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap;align-items:center}
+.ammo-controls input[type="text"]{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:.5rem .75rem;border-radius:4px;font-size:.85rem;font-family:inherit;min-width:220px;flex:1;max-width:400px}
+.ammo-controls input:focus{outline:none;border-color:var(--accent)}
+.ammo-controls select{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:.5rem .75rem;border-radius:4px;font-size:.85rem;font-family:inherit;cursor:pointer}
+.ammo-controls select:focus{outline:none;border-color:var(--accent)}
+.ammo-controls label{font-size:.85rem;color:var(--text2);display:flex;align-items:center;gap:.3rem;cursor:pointer}
+.sort-btn{background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:.5rem .75rem;border-radius:4px;font-size:.8rem;font-family:inherit;cursor:pointer;transition:border-color .15s,color .15s;white-space:nowrap}
+.sort-btn:hover,.sort-btn.active{border-color:var(--accent);color:var(--accent)}
+
+.ammo-table-wrap{overflow-x:auto;border-radius:8px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+thead{background:var(--surface);position:sticky;top:0;z-index:1}
+th{padding:.6rem .5rem;text-align:center;color:var(--accent);font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--border);cursor:pointer;user-select:none;white-space:nowrap}
+th:first-child{text-align:left}
+th:hover{color:var(--text)}
+th.sorted-asc::after{content:" \25B2";font-size:.6rem}
+th.sorted-desc::after{content:" \25BC";font-size:.6rem}
+th.class-header{cursor:default;min-width:52px}
+td{padding:.45rem .5rem;border-bottom:1px solid var(--border);white-space:nowrap;text-align:center}
+td:first-child{text-align:left}
+tr:hover{background:var(--surface2)}
+tr.caliber-header{background:var(--surface)}
+tr.caliber-header td{padding:.6rem .5rem;font-weight:700;color:var(--accent);font-size:.9rem;border-bottom:2px solid var(--accent2);text-align:left}
+
+/* Stat bars */
+.stat-cell{display:flex;align-items:center;gap:6px;justify-content:center}
+.stat-bar{width:50px;height:6px;background:var(--border);border-radius:3px;overflow:hidden;flex-shrink:0}
+.stat-bar-fill{height:100%;border-radius:3px;transition:width .2s}
+.stat-bar-fill.dmg{background:linear-gradient(90deg,#ea6b0a,#cf0b04)}
+.stat-bar-fill.pen{background:linear-gradient(90deg,#87d43d,#4cf057)}
+
+/* Class effectiveness cells */
+td.eff-cell{padding:0;text-align:center;font-weight:700;font-size:.85rem;color:#000;width:52px;min-width:52px}
+td.eff-cell .eff-val{display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;padding:.45rem .25rem}
+
+footer{text-align:center;padding:2rem;color:var(--text2);font-size:.75rem;border-top:1px solid var(--border);margin-top:2rem}
+
+@media(max-width:600px){
+  header{padding:.75rem 1rem}
+  main{padding:1rem}
+  .maps-grid{grid-template-columns:1fr}
+  .ammo-controls{flex-direction:column}
+  .ammo-controls input[type="text"]{max-width:100%;min-width:0}
+  table{font-size:.7rem}
+  th,td{padding:.35rem .25rem}
+  .stat-bar{width:30px}
+  .tarkov-time-widget{flex-wrap:wrap;justify-content:center;gap:.5rem}
+  .daylight-bar-container{flex-basis:100%;order:3}
+  .daylight-status{order:4;flex-basis:100%;text-align:center}
+  .time-value{font-size:1rem}
+  .effectiveness-legend{display:none}
+}

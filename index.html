@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tarky.info - Escape from Tarkov Quick Reference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>tarky.info <span>// quick reference</span></h1>
+  <nav>
+    <a href="#maps" class="active" onclick="showSection('maps')">Maps</a>
+    <a href="#ammo" onclick="showSection('ammo')">Ammo</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- MAPS SECTION -->
+<section id="maps" class="active">
+
+  <div class="tarkov-time-widget">
+    <div class="time-clock">
+      <span class="time-label">Daytime</span>
+      <span class="time-value" id="tarkov-left">--:--:--</span>
+    </div>
+    <div class="daylight-bar-container">
+      <div class="daylight-bar">
+        <div class="daylight-night-zone left"></div>
+        <div class="daylight-day-zone"></div>
+        <div class="daylight-night-zone right"></div>
+        <div class="daylight-marker" id="daylight-marker-left"></div>
+        <div class="daylight-marker right" id="daylight-marker-right"></div>
+      </div>
+      <div class="daylight-labels">
+        <span>00:00</span>
+        <span>05:00</span>
+        <span>12:00</span>
+        <span>21:00</span>
+        <span>24:00</span>
+      </div>
+    </div>
+    <div class="time-clock">
+      <span class="time-label">Nighttime</span>
+      <span class="time-value" id="tarkov-right">--:--:--</span>
+    </div>
+    <div class="daylight-status" id="daylight-status"></div>
+  </div>
+
+  <h2 style="margin-bottom:1rem;font-size:1.1rem;color:var(--text2)">3D Maps <span style="font-size:.8rem">(by <a href="https://reemr.se/" target="_blank" rel="noopener">RE3MR</a>)</span></h2>
+  <div class="maps-grid">
+    <div class="map-card">
+      <h3>Customs</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/reshala.webp" alt="Reshala"><span class="boss-name">Reshala</span><span class="boss-chance">75%</span></div>
+        <div class="goon-group">
+          <div class="goon-avatars"><img class="boss-avatar" src="img/knight.webp" alt="Knight"><img class="boss-avatar" src="img/bigpipe.webp" alt="Big Pipe"><img class="boss-avatar" src="img/birdeye.webp" alt="Birdeye"></div>
+          <span class="goon-label">Goons</span><span class="goon-chance">30%</span>
+        </div>
+        <div class="boss-item"><img class="boss-avatar" src="img/partisan.webp" alt="Partisan"><span class="boss-name">Partisan</span><span class="boss-chance">20%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/cultist.webp" alt="Cultists"><span class="boss-name">Cultists</span><span class="boss-chance">25% night</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a3/Re3mrCustoms2.jpg/revision/latest?cb=20250819122204" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Customs" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Factory</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/tagilla.webp" alt="Tagilla"><span class="boss-name">Tagilla</span><span class="boss-chance">50%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/cultist.webp" alt="Cultists"><span class="boss-name">Cultists</span><span class="boss-chance">2% night</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/3/33/Factory2DMapbyRe3mr.jpg/revision/latest?cb=20251127130957" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Factory" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Ground Zero</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/cultist.webp" alt="Cultists"><span class="boss-name">Cultists</span><span class="boss-chance">2% night</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/4/44/GroundZero3DMapByRe3mr.png/revision/latest?cb=20250822164650" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Ground_Zero" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Interchange</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/killa.webp" alt="Killa"><span class="boss-name">Killa</span><span class="boss-chance">75%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/tagilla.webp" alt="Tagilla"><span class="boss-name">Tagilla</span><span class="boss-chance">50%</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/27/InterchangeMapByre3mr.jpg/revision/latest?cb=20251207112307" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Interchange" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Labyrinth</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/shadowoftagilla.webp" alt="Shadow of Tagilla"><span class="boss-name">Shadow of Tagilla</span><span class="boss-chance">100%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/killa.webp" alt="Vengeful Killa"><span class="boss-name">Vengeful Killa</span><span class="boss-chance">100%</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/8/8d/The_Labyrinth_Map_by_re3mr.png/revision/latest?cb=20260217184407" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/The_Lab" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Lighthouse</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/zryachiy.webp" alt="Zryachiy"><span class="boss-name">Zryachiy</span><span class="boss-chance">100%</span></div>
+        <div class="goon-group">
+          <div class="goon-avatars"><img class="boss-avatar" src="img/knight.webp" alt="Knight"><img class="boss-avatar" src="img/bigpipe.webp" alt="Big Pipe"><img class="boss-avatar" src="img/birdeye.webp" alt="Birdeye"></div>
+          <span class="goon-label">Goons</span><span class="goon-chance">30%</span>
+        </div>
+        <div class="boss-item"><img class="boss-avatar" src="img/partisan.webp" alt="Partisan"><span class="boss-name">Partisan</span><span class="boss-chance">20%</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/9/9f/Re3mrLighthouseVerticalDay-min.jpg/revision/latest?cb=20251231133713" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Lighthouse" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Reserve</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/glukhar.webp" alt="Glukhar"><span class="boss-name">Glukhar</span><span class="boss-chance">75%</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/3/38/Re3mrReserveCardinalNorthWikiVer.jpg/revision/latest?cb=20260113163242" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Reserve" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Shoreline</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/sanitar.webp" alt="Sanitar"><span class="boss-name">Sanitar</span><span class="boss-chance">75%</span></div>
+        <div class="goon-group">
+          <div class="goon-avatars"><img class="boss-avatar" src="img/knight.webp" alt="Knight"><img class="boss-avatar" src="img/bigpipe.webp" alt="Big Pipe"><img class="boss-avatar" src="img/birdeye.webp" alt="Birdeye"></div>
+          <span class="goon-label">Goons</span><span class="goon-chance">30%</span>
+        </div>
+        <div class="boss-item"><img class="boss-avatar" src="img/partisan.webp" alt="Partisan"><span class="boss-name">Partisan</span><span class="boss-chance">20%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/cultist.webp" alt="Cultists"><span class="boss-name">Cultists</span><span class="boss-chance">25% night</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a1/ShorelineQuestsRe3mr.jpg/revision/latest?cb=20260124124127" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Shoreline" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Streets of Tarkov</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/kaban.webp" alt="Kaban"><span class="boss-name">Kaban</span><span class="boss-chance">75%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/kollontay.webp" alt="Kollontay"><span class="boss-name">Kollontay</span><span class="boss-chance">75%</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/1/17/StreetsOfTarkov3DMapByRE3MR.jpg/revision/latest?cb=20260103123303" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Streets_of_Tarkov" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Woods</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/shturman.webp" alt="Shturman"><span class="boss-name">Shturman</span><span class="boss-chance">75%</span></div>
+        <div class="goon-group">
+          <div class="goon-avatars"><img class="boss-avatar" src="img/knight.webp" alt="Knight"><img class="boss-avatar" src="img/bigpipe.webp" alt="Big Pipe"><img class="boss-avatar" src="img/birdeye.webp" alt="Birdeye"></div>
+          <span class="goon-label">Goons</span><span class="goon-chance">25%</span>
+        </div>
+        <div class="boss-item"><img class="boss-avatar" src="img/partisan.webp" alt="Partisan"><span class="boss-name">Partisan</span><span class="boss-chance">20%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/cultist.webp" alt="Cultists"><span class="boss-name">Cultists</span><span class="boss-chance">30% night</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/d/de/WikiWoodsRe3mr.jpg/revision/latest?cb=20260113172026" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Woods" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+    <div class="map-card">
+      <h3>Terminal</h3>
+      <div class="boss-row">
+        <div class="boss-item"><img class="boss-avatar" src="img/reshala.webp" alt="Reshala"><span class="boss-name">Reshala</span><span class="boss-chance">20%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/tagilla.webp" alt="Tagilla"><span class="boss-name">Tagilla</span><span class="boss-chance">20%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/killa.webp" alt="Killa"><span class="boss-name">Killa</span><span class="boss-chance">20%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/sanitar.webp" alt="Sanitar"><span class="boss-name">Sanitar</span><span class="boss-chance">20%</span></div>
+        <div class="boss-item"><img class="boss-avatar" src="img/glukhar.webp" alt="Glukhar"><span class="boss-name">Glukhar</span><span class="boss-chance">20%</span></div>
+      </div>
+      <div class="links">
+        <a href="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/5/58/Terminal2DMapByRE3MR.jpg/revision/latest?cb=20260302065207" target="_blank" rel="noopener">Map</a>
+        <a href="https://escapefromtarkov.fandom.com/wiki/Terminal" target="_blank" rel="noopener">Wiki</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMMO SECTION -->
+<section id="ammo">
+  <h2 style="margin-bottom:.75rem;font-size:1.1rem;color:var(--text2)">Ammo Chart <span style="font-size:.8rem">(data from <a href="https://tarkov.dev/" target="_blank" rel="noopener">tarkov.dev</a> API)</span></h2>
+
+  <div class="effectiveness-legend">
+    <table class="legend-table">
+      <thead>
+        <tr><th>Value</th><th>Effectiveness</th><th>Avg Shots to Kill</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="eff eff-0">0</span></td><td>Pointless</td><td>20+</td><td>Can't penetrate in any reasonable amount of hits</td></tr>
+        <tr><td><span class="eff eff-1">1</span></td><td>It's Possible, But...</td><td>13 to 20</td><td>Typically doesn't penetrate at all for a large number of hits, or starts with a very low chance and barely increases</td></tr>
+        <tr><td><span class="eff eff-2">2</span></td><td>Magdump Only</td><td>9 to 13</td><td>Very low or no penetration chance initially and very slowly gains chance</td></tr>
+        <tr><td><span class="eff eff-3">3</span></td><td>Slightly Effective</td><td>5 to 9</td><td>Low penetration chance initially and slowly gains chance, or quickly damages armor until it penetrates</td></tr>
+        <tr><td><span class="eff eff-4">4</span></td><td>Effective</td><td>3 to 5</td><td>Starts with a low-medium penetration chance but quickly increases</td></tr>
+        <tr><td><span class="eff eff-5">5</span></td><td>Very Effective</td><td>1 to 3</td><td>Penetrates a large percent of the time initially, often quickly going to &gt;90%</td></tr>
+        <tr><td><span class="eff eff-6">6</span></td><td>Basically Ignores</td><td>&lt;1</td><td>Initially penetrates &gt;80% of the time</td></tr>
+      </tbody>
+    </table>
+    <p class="legend-note">Note: this is a comparison guideline on what you should use and not always exactly representative of true performance against armor.</p>
+  </div>
+
+  <div class="ammo-controls">
+    <input type="text" id="ammo-search" placeholder="Search ammo (e.g. M855A1, 7.62, BP)..." autofocus>
+    <select id="caliber-filter">
+      <option value="">All Calibers</option>
+    </select>
+    <select id="sort-field">
+      <option value="penetrationPower">Sort: Penetration</option>
+      <option value="damage">Sort: Damage</option>
+      <option value="armorDamage">Sort: Armor Damage</option>
+      <option value="fragmentationChance">Sort: Fragmentation</option>
+      <option value="initialSpeed">Sort: Velocity</option>
+    </select>
+    <button class="sort-btn" id="sort-dir" onclick="toggleSortDir()">DESC</button>
+  </div>
+  <div class="ammo-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-col="name">Name</th>
+          <th data-col="damage">DMG</th>
+          <th data-col="penetrationPower">PEN</th>
+          <th data-col="armorDamage">Armor&nbsp;%</th>
+          <th data-col="fragmentationChance">Frag&nbsp;%</th>
+          <th data-col="recoilModifier">Recoil</th>
+          <th data-col="initialSpeed">Velocity</th>
+          <th class="class-header">Class 1</th>
+          <th class="class-header">Class 2</th>
+          <th class="class-header">Class 3</th>
+          <th class="class-header">Class 4</th>
+          <th class="class-header">Class 5</th>
+          <th class="class-header">Class 6</th>
+        </tr>
+      </thead>
+      <tbody id="ammo-body"></tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  tarky.info &mdash; community reference, not affiliated with Battlestate Games.
+  Ammo data from <a href="https://tarkov.dev/" target="_blank" rel="noopener">tarkov.dev</a> API.
+  Maps by <a href="https://reemr.se/" target="_blank" rel="noopener">RE3MR</a>.
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
